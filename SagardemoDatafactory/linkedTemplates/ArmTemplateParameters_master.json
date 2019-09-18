@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "SagardemoDatafactory"
+		},
+		"AzureDataLakeStore1_servicePrincipalKey": {
+			"value": ""
+		},
+		"Dailbolb_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://sagardemodatalake.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_servicePrincipalId": {
+			"value": "b0784e37-1369-476f-b9e2-0f5c2908efcb"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "5552e4cd-e97b-4cee-ab76-da70d10b6e8e"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "c4ba082e-5f6b-4cf1-b274-c95488802911"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "Sagar_Demo"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

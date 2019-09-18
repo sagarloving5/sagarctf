@@ -1,0 +1,28 @@
+{
+	"name": "dfcuratedtocuratedservedctf",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "curateddata",
+						"type": "DatasetReference"
+					},
+					"name": "curated"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "curatedservedctf",
+						"type": "DatasetReference"
+					},
+					"name": "curatedservedctf"
+				}
+			],
+			"transformations": [],
+			"script": "\n\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> curated\ncurated sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['ctfcuratedserved.csv'],\n\tpartitionBy('hash', 1)) ~> curatedservedctf"
+		}
+	}
+}
